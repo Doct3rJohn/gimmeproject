@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # @_shafiqaiman_
-import pyperclip
-import netifaces, argparse, base64, json, sys, re
+
+import argparse, base64, json, sys, re
+import clipboard, netifaces
 from netifaces import AF_INET
 
 def decodeb64(string):
@@ -21,7 +22,7 @@ def options(shell_name, ip, port, type="/bin/bash"):
                     d1 = d.replace("CHANGE_LHOST", ip)
                     d2 = d1.replace("CHANGE_LPORT", port)
                     d3 = d2.replace("CHANGE_TYPE", type)
-                    pyperclip.copy(d2)
+                    clipboard.copy(d3)
                     return f"[!] The payload has been copied to your clipboard.\n\n[>] {d3}"
     except FileNotFoundError:
         return "Error: [shellz.json] not found!"
