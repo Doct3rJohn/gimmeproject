@@ -4,11 +4,17 @@
 
 `gimmeproject` is the CLI tool that can generate a reverse shell from the list based on (https://www.revshells.com/) just by using Python3. In the course of building these tools. I learn a lot and how powerful it is the [Python programming language](https://www.python.org/). 
 
-# Reverse Shell List
+# Installation
+```bash
+git clone https://github.com/Doct3rJohn/gimmeproject.git
+cd gimmeproject
+pip3 install -r requirements.txt
+```
 
+# Reverse Shell List
 ```json
 {
-	"reverse_shell_list": [
+	"shell_list": [
         "awk",
         "bash",
         "golang",
